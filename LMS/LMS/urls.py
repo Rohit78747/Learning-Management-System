@@ -24,7 +24,10 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('about', views.about, name='about'),
     path('accounts/register', user_login.Register, name='register'),
-
     path('accounts/', include('django.contrib.auth.urls')),
-    path('doLogin', user_login.doLogin, name='doLogin')
+    path('doLogin', user_login.doLogin, name='doLogin'),
+    path('accounts/profile', user_login.Profile, name='profile'),
+    path('accounts/profile/update', user_login.Profile_Update, name='profile_update'),
+
+
 ]
